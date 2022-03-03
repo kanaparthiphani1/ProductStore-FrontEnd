@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import HeaderComp from "./components/Header";
+import Sidebar from "./components/Sidebar";
+
+import {Switch, Route} from 'react-router-dom'
+import { Button, Layout } from "antd";
+import './App.css'
+import Products from "./components/Products";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout className="outercont">
+        <Sidebar />
+      <Layout style={{maxWidth:'100vw'}}>
+        <HeaderComp />
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={Products}/>
+          </Switch>
+        </Layout>
+      </Layout>
+    </Layout>
   );
 }
 
