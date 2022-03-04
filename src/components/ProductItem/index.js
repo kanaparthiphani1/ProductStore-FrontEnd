@@ -1,3 +1,4 @@
+import { Skeleton } from "antd";
 import React from "react";
 import "./index.css";
 

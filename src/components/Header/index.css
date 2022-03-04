@@ -10,3 +10,33 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 }
+
+.small-cont{
+    display: none;
+}
+
+.large-cont{
+    display: flex;
+}
+
+@media screen and (max-width:850px) {
+    .menu-items{
+        
+    }
+
+    .small-cont{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 100px;
+    }
+
+    .dropdown{
+        display: flex;
+        align-items: center;
+    }
+
+    .large-cont{
+        display: none;
+    }
+}
